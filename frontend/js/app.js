@@ -12,6 +12,15 @@ document.getElementById("loginForm").addEventListener("submit", async function (
         return;
     }
 
+    if(!validateMail()) {
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Invalid email",
+        });
+        return;
+    }
+
     if (password.length < 6) {
         Swal.fire({
             icon: "error",
@@ -65,4 +74,9 @@ function succeessLogin(){
 function spinner(status = true) {
     const spinner = document.getElementById("spinner");
     status ? spinner.classList.remove("d-none") : spinner.classList.add("d-none");
+}
+
+function validateMail(correo) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(correo);
 }
