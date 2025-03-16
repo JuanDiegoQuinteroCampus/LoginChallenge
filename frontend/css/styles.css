@@ -13,6 +13,12 @@ body {
     justify-content: center;
 }
 
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .login-container {
     max-width: 900px;
     background-color: white;
@@ -60,6 +66,7 @@ body {
     background-color: transparent;
     border-right: none;
     color: #aaa;
+    margin-bottom: 20px;
 }
 
 .form-control {
@@ -149,8 +156,25 @@ body {
     transform: translateY(-3px);
 }
 
+body.swal2-height-auto {
+    height: 100vh !important;
+}
+
+.content-spinner{
+    position: absolute;
+    background: #ffffffcf;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (max-width: 768px) {
     .login-image {
         height: 200px;
+    }
+    .login-image img{
+        max-width: 30%;
     }
 }
