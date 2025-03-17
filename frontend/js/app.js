@@ -12,7 +12,7 @@ document.getElementById("loginForm").addEventListener("submit", async function (
         return;
     }
 
-    if(!validateMail()) {
+    if(!validateMail(email)) {
         Swal.fire({
             icon: "error",
             title: "Oops...",
